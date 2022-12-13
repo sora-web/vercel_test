@@ -6,6 +6,7 @@ import { contentfulClient } from "../lib/contentful";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import type { Document } from "@contentful/rich-text-types";
 import type { BlogPost } from "../lib/contentful";
+import ContactForm from "../components/contactForm";
 
 const entries = await contentfulClient.getEntries<BlogPost>({
   content_type: "post",
@@ -14,6 +15,7 @@ const entries = await contentfulClient.getEntries<BlogPost>({
 
 <Layout title="Welcome to Astro.">
   <main>
+    <ContactForm />
     {
       entries.items.map((item) => (
         <section>
