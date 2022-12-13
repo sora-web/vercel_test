@@ -8,9 +8,13 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro build",
+    "vercel": "vercel deploy --prebuilt"
   },
   "dependencies": {
-    "astro": "^1.6.15"
+    "@astrojs/vercel": "^2.3.6",
+    "@contentful/rich-text-html-renderer": "^16.0.2",
+    "astro": "^1.6.15",
+    "contentful": "^9.2.14"
   }
 }
