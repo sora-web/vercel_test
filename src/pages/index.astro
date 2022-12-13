@@ -6,6 +6,7 @@ import { contentfulClient } from "../lib/contentful";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import type { Document } from "@contentful/rich-text-types";
 import type { BlogPost } from "../lib/contentful";
+import React from "react";
 import ContactForm from "../components/contactForm";
 
 const entries = await contentfulClient.getEntries<BlogPost>({
@@ -13,7 +14,11 @@ const entries = await contentfulClient.getEntries<BlogPost>({
 });
 ---
 
-<Layout title="Welcome to Astro.">
+<div>
+  <ContactForm />
+</div>
+
+<!-- <Layout title="Welcome to Astro.">
   <main>
     <ContactForm />
     {
@@ -98,4 +103,4 @@ const entries = await contentfulClient.getEntries<BlogPost>({
     gap: 1rem;
     padding: 0;
   }
-</style>
+</style> -->
